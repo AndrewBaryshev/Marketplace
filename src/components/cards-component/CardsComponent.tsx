@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ProductCard } from "../product-card/ProductCard";
 import styles from "./cards-component.module.css";
+import { Circles } from "react-loader-spinner";
 
 export const CardsComponent = () => {
   const [data, setData] = useState([]);
@@ -27,17 +28,29 @@ export const CardsComponent = () => {
 
   return (
     <div className={styles.cards}>
-      {data.map((elem: any) => (
-        <ProductCard
-          id={elem.id}
-          name={elem.name}
-          price={elem.price}
-          category={elem.category.name}
-          descriptionLong={elem.long_description}
-          descriptionShort={elem.short_description}
-          img={elem.get_image}
+      {data.length ? (
+        data.map((elem: any) => (
+          <ProductCard
+            id={elem.id}
+            name={elem.name}
+            price={elem.price}
+            category={elem.category.name}
+            descriptionLong={elem.long_description}
+            descriptionShort={elem.short_description}
+            img={elem.get_image}
+          />
+        ))
+      ) : (
+        <Circles
+          height="140"
+          width="140"
+          color="#E8E4F2"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
         />
-      ))}
+      )}
     </div>
   );
 };

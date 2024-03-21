@@ -22,13 +22,15 @@ export const ProductCard: FC<IProductCard> = ({
 }) => {
   return (
     <div key={id} className={styles.productCard}>
-      <img className={styles.imgStyle} src={img} alt="" />
-      <div>
+      <div className={styles.imgStyle}>
+        <img className={styles.img} src={img} alt="" />
+      </div>
+      <div className={styles.headerCard}>
         {name}/{price}/{category}
       </div>
-      <p>{descriptionShort}</p>
-      <p>{descriptionLong}</p>
-      <button>купить</button>
+      <p className={styles.description}>{descriptionShort}</p>
+      <p className={styles.description}>{descriptionLong}</p>
+      <button className={styles.button}>купить</button>
     </div>
   );
 };
