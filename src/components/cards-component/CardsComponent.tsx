@@ -12,7 +12,7 @@ export const CardsComponent = () => {
       console.log(res);
       setData(res);
     } catch (err) {
-      console.log("fuck: ", err);
+      console.log(err);
     }
   }
 
