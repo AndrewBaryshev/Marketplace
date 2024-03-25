@@ -33,15 +33,3 @@
   font-size: 20px;
 }
 
-.button {
-  background-color: #9DE6AD;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 43px;
-  width: 162px;
-  border: none;
-  border-radius: 10px;
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 20px;
-}

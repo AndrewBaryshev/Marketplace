@@ -1,0 +1,41 @@
+.containerFlex {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 40px;
+  background-color: #555555;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.header {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.find {
+  width: 243px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}

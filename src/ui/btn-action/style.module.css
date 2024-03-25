@@ -1,0 +1,18 @@
+.button {
+  transition: 0.3s;
+  background-color: #9DE6AD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  width: 162px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #6dc380;
+}

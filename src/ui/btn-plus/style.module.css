@@ -1,0 +1,36 @@
+.container {
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+.plus {
+  position: relative;
+  width: 18px;
+  height: 3px;
+  background-color: black;
+}
+
+.plus::after {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 3px;
+  background-color: inherit;
+  left: 45%;
+  bottom: -7px;
+}
+
+.container:hover {
+  background-color: rgb(90, 191, 158);
+  cursor: pointer;
+  .plus {
+    background-color: blue;
+  }
+}
+

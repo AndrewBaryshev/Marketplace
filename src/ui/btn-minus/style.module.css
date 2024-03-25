@@ -1,0 +1,25 @@
+.container {
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 127, 127);
+  border-radius: 5px;
+}
+
+.minus {
+  position: relative;
+  width: 18px;
+  height: 3px;
+  background-color: black;
+}
+
+.container:hover {
+  background-color: rgb(191, 90, 90);
+  cursor: pointer;
+  .minus {
+    background-color: rgb(255, 0, 0);
+  }
+}

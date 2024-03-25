@@ -1,5 +1,7 @@
 import styles from "./product-card.module.css";
+import CartProducts from "../../store/cartProducts.ts";
 import { FC } from "react";
+import { BtnAction } from "../../ui/index.ts";
 
 interface IProductCard {
   name: string;
@@ -30,7 +32,9 @@ export const ProductCard: FC<IProductCard> = ({
       </div>
       <p className={styles.description}>{descriptionShort}</p>
       <p className={styles.description}>{descriptionLong}</p>
-      <button className={styles.button}>купить</button>
+      <BtnAction action={() => CartProducts.pushData({ name, price, id })}>
+        купить
+      </BtnAction>
     </div>
   );
 };
