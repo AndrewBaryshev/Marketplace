@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { ProductCard } from "../product-card/ProductCard";
 import styles from "./cards-component.module.css";
 import { Circles } from "react-loader-spinner";
+import { IDataFetch } from "./type";
 
 export const CardsComponent = () => {
   const [data, setData] = useState([]);
 
-  async function getData(url: any) {
+  async function getData(url: string) {
     try {
       const promise = await fetch(url);
       const res = await promise.json();
-      console.log(res);
       setData(res);
     } catch (err) {
       console.log(err);
@@ -21,16 +21,14 @@ export const CardsComponent = () => {
     getData(
       "https://bh018dd7r3.execute-api.us-west-2.amazonaws.com/api/shop/products"
     );
-    console.log("here");
   }, []);
-
-  console.log(data);
 
   return (
     <div className={styles.cards}>
       {data.length ? (
-        data.map((elem: any) => (
+        data.map((elem: IDataFetch) => (
           <ProductCard
+            key={elem.id}
             id={elem.id}
             name={elem.name}
             price={elem.price}

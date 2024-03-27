@@ -7,7 +7,6 @@ import { CartComponent } from "../cart-component/CartComponent";
 import { observer } from "mobx-react-lite";
 
 export const Header = observer(() => {
-  console.log(CartProducts);
   return (
     <header className={styles.containerFlex}>
       <div className={styles.flex}>

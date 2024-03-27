@@ -1,7 +1,8 @@
 import { makeAutoObservable } from "mobx"
+import { IData, IProduct } from "./type"
 
 class CartProducts {
-  data: any[] = []
+  data: IData[] = []
   open: boolean = false
   constructor() {
     makeAutoObservable(this)
@@ -22,11 +23,10 @@ class CartProducts {
     }
   }
 
-  pushData(product: any) {
+  pushData(product: IProduct) {
     const index = this._findElemById(product.id)
     if(index.flag) {
       this.data[index.curr].count += 1
-      console.log("awdazzc ", this.data)
     } else {
       this.data.push({...product, count: 1})
     }
@@ -34,12 +34,10 @@ class CartProducts {
 
   onClose() {
     this.open = false
-    console.log(this.open)
   }
 
   onOpen() {
     this.open = true
-    console.log(this.open)
   }
 
   onPlusAmount(id: number) {

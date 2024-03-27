@@ -2,6 +2,7 @@ import { observer } from "mobx-react-lite";
 import CartProducts from "../../store/cartProducts.ts";
 import styles from "./style.module.css";
 import { BtnAction, BtnMinus, BtnPlus } from "../../ui/index.ts";
+import { IData } from "../../store/type";
 
 export const CartComponent = observer(() => {
   if (!CartProducts.open) {
@@ -13,7 +14,7 @@ export const CartComponent = observer(() => {
       <div className={styles.containerCart}>
         <h2>Покупки</h2>
         <div className={styles.productsContainer}>
-          {CartProducts.data.map((item: any) => (
+          {CartProducts.data.map((item: IData) => (
             <div className={styles.products} key={item.id}>
               <div>price: {item.price}</div>
               <div>name: {item.name}</div>

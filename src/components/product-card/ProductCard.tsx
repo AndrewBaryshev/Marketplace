@@ -2,16 +2,7 @@ import styles from "./product-card.module.css";
 import CartProducts from "../../store/cartProducts.ts";
 import { FC } from "react";
 import { BtnAction } from "../../ui/index.ts";
-
-interface IProductCard {
-  name: string;
-  price: number;
-  category: string;
-  descriptionShort: string;
-  descriptionLong: string;
-  img: string;
-  id: number;
-}
+import { IProductCard } from "./type";
 
 export const ProductCard: FC<IProductCard> = ({
   name,
